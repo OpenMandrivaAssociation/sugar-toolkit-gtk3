@@ -24,9 +24,9 @@ BuildRequires: python-devel
 BuildRequires: pkgconfig(pygtk-2.0)
 BuildRequires: python-gobject-devel
 
-Requires: dbus-python
+Requires: python-dbus
 Requires: gettext
-Requires: pygobject3
+Requires: python-gi
 Requires: python-simplejson
 Requires: python-dateutil
 Requires: sugar-datastore
