@@ -1,2 +1,4 @@
+removed_sources:
+  sugar-toolkit-gtk3-0.98.3.tar.bz2: 136cf159baf2fc1c9af18f4d7d0594b01e3a5cbc
 sources:
-  "sugar-toolkit-gtk3-0.98.3.tar.bz2": 136cf159baf2fc1c9af18f4d7d0594b01e3a5cbc
+  sugar-toolkit-gtk3-0.101.4.tar.xz: 94dc3de92ec65665ecd0fdf597d4b03b95b00b04
