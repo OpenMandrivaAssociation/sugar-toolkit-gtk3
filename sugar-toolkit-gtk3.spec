@@ -7,6 +7,7 @@ Release: 1
 URL:     http://wiki.laptop.org/go/Sugar
 Source0: http://download.sugarlabs.org/sources/sucrose/glucose/%{name}/%{name}-%{version}.tar.xz
 Source1: macros.sugar
+Source100: %{name}.rpmlintrc
 License: LGPLv2+
 Group:   System/Libraries
 
@@ -39,7 +40,7 @@ This is the toolkit depending on GTK3.
 
 %package devel
 Summary: Invokation information for accessing SugarExt-1.0
-Group: Development/Libraries
+Group: Development/GNOME and GTK+
 Requires: %{name} = %{version}-%{release}
 
 %description devel
