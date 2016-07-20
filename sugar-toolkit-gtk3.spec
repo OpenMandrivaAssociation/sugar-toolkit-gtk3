@@ -1,9 +1,10 @@
 %define _disable_ld_no_undefined 1
+%define _disable_rebuild_configure 1
 
 Summary: Sugar toolkit GTK+ 3
 Name:    sugar-toolkit-gtk3
-Version: 0.101.4
-Release: 2
+Version: 0.108.1
+Release: 1
 URL:     http://wiki.laptop.org/go/Sugar
 Source0: http://download.sugarlabs.org/sources/sucrose/glucose/%{name}/%{name}-%{version}.tar.xz
 Source1: macros.sugar
@@ -20,15 +21,15 @@ BuildRequires: librsvg2-devel
 BuildRequires: pkgconfig(sm)
 BuildRequires: perl-XML-Parser
 BuildRequires: pkgconfig
-BuildRequires: python-devel
+BuildRequires: python2-devel
 BuildRequires: pkgconfig(pygtk-2.0)
-BuildRequires: python-gobject-devel
+BuildRequires: python2-gobject-devel
 
-Requires: python-dbus
+Requires: python2-dbus
 Requires: gettext
-Requires: python-gi
-Requires: python-simplejson
-Requires: python-dateutil
+Requires: python2-gi
+Requires: python2-simplejson
+Requires: python2-dateutil
 Requires: sugar-datastore
 Requires: unzip
 
@@ -52,7 +53,7 @@ the SugarExt-1.0 library through gobject-introspection.
 
 %build
 %configure
-make %{?_smp_mflags} V=1
+make V=1
 
 %install
 make install DESTDIR=%{buildroot}
@@ -72,7 +73,7 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc COPYING README
-%{python_sitelib}/*
+%{python2_sitelib}/*
 %{_sysconfdir}/rpm/macros.sugar
 %{_libdir}/girepository-1.0/*.typelib
 %{_libdir}/lib*.so.*
