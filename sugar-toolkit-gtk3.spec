@@ -12,6 +12,11 @@ Source100: %{name}.rpmlintrc
 License: LGPLv2+
 Group:   System/Libraries
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(alsa)
 BuildRequires: gettext-devel
 BuildRequires: gtk+3.0-devel
